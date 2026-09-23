@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our School Memories 💗</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #ffe6f2, #e8e0ff, #dff7ff);
+        color: #5b4566;
+        text-align: center;
+    }
+
+    header {
+        padding: 50px 20px;
+        background: rgba(255,255,255,0.45);
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+    }
+
+    h1 {
+        font-size: 35px;
+        color: #d65a9e;
+    }
+
+    h2 {
+        color: #9b6dcc;
+        margin-top: 35px;
+    }
+
+    .card {
+        background: rgba(255,255,255,0.7);
+        margin: 25px auto;
+        padding: 25px;
+        width: 85%;
+        max-width: 500px;
+        border-radius: 25px;
+        box-shadow: 0 8px 25px rgba(150,100,160,0.15);
+    }
+
+    .friend {
+        font-size: 24px;
+        color: #d65a9e;
+        font-weight: bold;
+    }
+
+    .heart {
+        position: fixed;
+        bottom: -20px;
+        font-size: 22px;
+        animation: float 5s linear infinite;
+        opacity: 0.8;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(0) rotate(0deg);
+            opacity: 0;
+        }
+        20% {
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(-100vh) rotate(360deg);
+            opacity: 0;
+        }
+    }
+
+    button {
+        background: #e98abb;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 25px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    footer {
+        padding: 30px;
+        font-size: 14px;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌸 Our School Memories 🌸</h1>
+    <p>Gayatri Shiksha Niketan 🏫💗</p>
+    <p>Where ordinary school days became beautiful memories ✨</p>
+</header>
+
+<div class="card">
+    <h2>👭 Our Friends</h2>
+    <p class="friend">💗 Zoya 💗</p>
+    <p>
+        A school friend who makes ordinary moments
+        a little more fun and memorable! 🌷
+    </p>
+</div>
+
+<div class="card">
+    <h2>📚 School Memories</h2>
+    <p>
+        Classes, lunch breaks, homework, silly jokes,
+        random talks and unforgettable moments 😂💞
+    </p>
+    <p>
+        These little moments are the memories
+        we'll remember for a long time. ✨
+    </p>
+</div>
+
+<div class="card">
+    <h2>😂 Fun Corner</h2>
+    <p>School without friends = 😐</p>
+    <p>School with friends = 😂🤣💗✨</p>
+
+    <button onclick="showMessage()">Click for a surprise 💌</button>
+    <p id="message"></p>
+</div>
+
+<div class="card">
+    <h2>🌷 A Little Message</h2>
+    <p>
+        No matter how many years pass,
+        these school memories will always have
+        a special place in our hearts. 💕
+    </p>
+    <p>
+        Thank you for making school life more fun! 🥹🌸
+    </p>
+</div>
+
+<footer>
+    Made with 💗 for our school friendship ✨<br>
+    Gayatri Shiksha Niketan 🏫
+</footer>
+
+<script>
+function showMessage() {
+    document.getElementById("message").innerHTML =
+    "You found the secret message! 🥹💗 Keep smiling and making memories! 🌸✨";
+}
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = ["💗","💖","💕","🌸","✨"][Math.floor(Math.random()*5)];
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (3 + Math.random() * 4) + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 7000);
+}
+
+setInterval(createHeart, 700);
+</script>
+
+</body>
+</html>
